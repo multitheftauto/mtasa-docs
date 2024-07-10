@@ -2,7 +2,7 @@
 This repository is for collaboration and storage of documentation relating to [mtasa-blue](https://github.com/multitheftauto/mtasa-blue) and [mtasa-resources](https://github.com/multitheftauto/mtasa-resources).
 
 ## Contribution 
-It's recommended to start with the `CONTRIBUTING.md` for the respective project, explorting how your contributions should be made, as well as information on best practices:
+It's recommended to start with the `CONTRIBUTING.md` for the respective project, exploring how your contributions should be made, as well as information on best practices:
 - [mtasa-blue](mtasa-blue/CONTRIBUTING.md)
 - [mtasa-resources](mtasa-resources/CONTRIBUTING.md)
 
