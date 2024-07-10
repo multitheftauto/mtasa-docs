@@ -35,7 +35,7 @@ Coding guidelines (exploring real code snippets and scenarios) should be kept in
 
 If a document requires a large snippet of code, it's best to store the code snippet separately under `examples/<example_name>`
 
-For example (pun not intended), if writing the section on "Securing element data" for the [Script security](#) guide, the script example would be under `mtasa-blue/examples/securing_element_data.lua` and you'd link to that file in the guide.
+For example (pun not intended), if writing the section on "Securing element data" for the [Script security](#) guide, the script example would be under `mtasa-resources/examples/securing_element_data.lua` and you'd link to that file in the guide.
 
 ## What to contribute
 
