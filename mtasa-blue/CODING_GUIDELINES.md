@@ -226,8 +226,7 @@ and understand its purpose.
         return m_status == STATUS_DEAD;
     }
     ```
--   Use [range-based for loops](https://en.cppreference.com/w/cpp/language/range-for) 
--   when possible.
+-   Use [range-based for loops](https://en.cppreference.com/w/cpp/language/range-for) when possible.
     ``` cpp
     std::vector<int> vec; // Example std container
 
@@ -354,8 +353,8 @@ CObject::CObject(CElement* pParent, CObjectManager* pObjectManager, bool bIsLowL
 ### Type preference
 
 1.  In C++, prefer using types from the std namespace provided by
-appropriate headers (such as **`<cstdint>`{=html}**,
-**`<cstddef>`{=html}**, etc.). This is recommended for several reasons:
+appropriate headers (such as **`<cstdint>`**,
+**`<cstddef>`**, etc.). This is recommended for several reasons:
 
     -   Namespace Safety: Types defined in these headers are
         encapsulated within the std namespace, which helps avoid naming
@@ -371,13 +370,13 @@ appropriate headers (such as **`<cstdint>`{=html}**,
     <!-- -->
 
     -   C++ Standard Compliance: The C++ standard (C++11 and later)
-        includes headers like **`<cstdint>`{=html}** and
-        **`<cstddef>`{=html}**, which provide standardized types:
+        includes headers like **`<cstdint>`** and
+        **`<cstddef>`**, which provide standardized types:
 
-        * `<cstdint>`{=html} includes exact-width integer types such as
+        * `<cstdint> includes exact-width integer types such as
         **'std::uint32_t**, **std::int32_t**, etc.
 
-        * `<cstddef>`{=html} includes types like **std::size_t**,
+        * `<cstddef>` includes types like **std::size_t**,
         **std::ptrdiff_t**, etc.
 
     -   Portability and Maintainability: Using these headers makes your
