@@ -226,8 +226,7 @@ and understand its purpose.
         return m_status == STATUS_DEAD;
     }
     ```
--   Use [range-based for loops](https://en.cppreference.com/w/cpp/language/range-for) 
--   when possible.
+-   Use [range-based for loops](https://en.cppreference.com/w/cpp/language/range-for) when possible.
     ``` cpp
     std::vector<int> vec; // Example std container
 
@@ -371,13 +370,13 @@ appropriate headers (such as **`<cstdint>`{=html}**,
     <!-- -->
 
     -   C++ Standard Compliance: The C++ standard (C++11 and later)
-        includes headers like **`<cstdint>`{=html}** and
-        **`<cstddef>`{=html}**, which provide standardized types:
+        includes headers like **`<cstdint>`** and
+        **`<cstddef>`**, which provide standardized types:
 
-        * `<cstdint>`{=html} includes exact-width integer types such as
+        * `<cstdint> includes exact-width integer types such as
         **'std::uint32_t**, **std::int32_t**, etc.
 
-        * `<cstddef>`{=html} includes types like **std::size_t**,
+        * `<cstddef>` includes types like **std::size_t**,
         **std::ptrdiff_t**, etc.
 
     -   Portability and Maintainability: Using these headers makes your
