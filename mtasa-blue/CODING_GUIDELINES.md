@@ -353,8 +353,8 @@ CObject::CObject(CElement* pParent, CObjectManager* pObjectManager, bool bIsLowL
 ### Type preference
 
 1.  In C++, prefer using types from the std namespace provided by
-appropriate headers (such as **`<cstdint>`{=html}**,
-**`<cstddef>`{=html}**, etc.). This is recommended for several reasons:
+appropriate headers (such as **`<cstdint>`**,
+**`<cstddef>`**, etc.). This is recommended for several reasons:
 
     -   Namespace Safety: Types defined in these headers are
         encapsulated within the std namespace, which helps avoid naming
