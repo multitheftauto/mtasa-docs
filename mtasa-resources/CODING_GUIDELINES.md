@@ -1,90 +1,94 @@
-## Contents:
-- [Introduction](#introduction)
-- [Code style](#code-style)
-    - [Early return](#early-return)
-    - [Consistent naming conventions](#consistent-naming-conventions)
-    - [Use of constants](#use-of-constants)
-    - [Indentation and formatting](#indentation-and-formatting)
-- [General principles](#general-principles)
-- [Script security](#script-security)
-- [Error handling](#error-handling)
-- [Performance considerations](#performance-considerations)
+## Introduction
+Welcome to the coding guidelines for the **[mtasa-resources](https://github.com/multitheftauto/mtasa-resources)** repository!<br>
+We are aware that cooperative work and high-quality code require compliance with the following rules, so we ask all interested parties to take the following into account in all of their contributions.
 
-# Introduction
+## Contents
+- [General](#general)
+    - [Simplicity](#simplicity)
+    - [Comments](#comments)
+    - [Returns](#returns)
+- [Style](#style)
+- [Security](#security)
+- [Performance](#performance)
 
-We appreciate your interest in contributing to the development and
-improvement of the **Default Lua resources that come with the Multi
-Theft Auto (MTA) multiplayer mod**. To ensure high-quality code and a
-smooth collaboration process, please adhere to the following **coding
-guidelines**.
+## General
+When you contribute to our codebase, you should always<br>
+Write code that is
+- Readable
+- Secure
+- Scalable
+- Maintainable
 
-# Code style
-
-### Early return
-
-To improve code readability, prefer using early returns to handle error
-conditions or special cases at the beginning of functions. This helps to
-avoid deep nesting and makes the main logic easier to follow.
+### Simplicity
+Striving for simplicity is always important, as simple code is easier to read and maintain.<br>
+Some example:
 
 ```lua
--- Bad example 
-function exampleFunction(value) 
-    if value > 0 then 
-        -- Some logic here 
-        if value < 100 then 
-            -- More logic here 
-            if value ~= 50 then 
-                -- Main logic here 
-            end 
-        end 
-    end 
-end 
+local foo = true
 
--- Good example 
-function exampleFunction(value) 
-    if value \<= 0 then return end 
-    if value \>= 100 then return end 
-    if value == 50 then return end 
-    -- Main logic here end 
+-- Bad
+function bar()
+    if foo then
+        return true
+    else
+        return false
+    end
+end
+
+-- Good
+function baz()
+    return foo
 end
 ```
 
-### Consistent naming conventions
+### Comments
+Comments are good - If you use them well!<br>
+Commenting is useful for making complex logic tasks easier to explain, but it's unnecessary to comment every line, like here:
 
-TODO
+```lua
+-- Never do this!
+-- No one wants to read a comment on every line
 
-### Use of constants
+addEvent("foo", true) -- Add the event
+addEventHandler("foo", root, -- Add the event handler
+    function()
+        bar = 10 -- Set the bar variable to 10
+        baz(bar) -- Call the baz function
+    end
+)
+```
 
-TODO
+### Returns
+Early return pattern is preferred, as they provide easier readability and transparency.<br>
+Example:
 
-### Indentation and formatting
+```lua
+-- Nested
+function a()
+    if foo then
+        if bar then
+            if baz then
+                return true
+            end
+        end
+    end
+end
 
-Ensure your code editor (e.g. [Visual Studio Code](https://code.visualstudio.com/) 
-applies the rules established by the project's **.editorconfig** file.
+-- Early
+function b()
+    if not (foo and bar and baz) then
+        return
+    end
 
-# General principles
+    return true
+end
+```
 
--   Write clear, readable, and maintainable code.
--   Follow the [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
-    (Don't Repeat Yourself) principle.
--   Adhere to the [KISS](https://en.wikipedia.org/wiki/KISS_principle)
-    (Keep It Simple, Stupid) principle.
--   Use meaningful variable and function names that convey their purpose.
--   Comment your code where necessary to explain the logic.
+## Style
+To do
 
-# Script security
+## Security
+To do
 
-Follow the [Script security](https://wiki.multitheftauto.com/wiki/Script_security) 
-principles established for MTA:SA scripts to ensure the safety and integrity of your code.
-
-# Error handling
-
-TODO
-
-# Performance considerations
-
--   Avoid unnecessary computations within loops.
--   Cache results of expensive operations whenever possible.
--   Use local variables to improve performance.
-
-
+## Performance
+To do
