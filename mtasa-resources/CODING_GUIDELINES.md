@@ -58,6 +58,29 @@ addEventHandler("foo", root, -- Add the event handler
 )
 ```
 
+Instead, use comments to clarify complex logic or provide context where it's needed:
+
+```lua
+function fiz(x, y)
+    -- Step 1: Initialize intermediate results
+    local a = x * y
+    local b = x + y
+
+    -- Step 2: Perform iterative adjustment on a
+    for i = 1, 10 do
+        -- If a is even, halve it; if odd, increment it
+        if a % 2 == 0 then
+            a = a / 2
+        else
+            a = a + 1
+        end
+    end
+
+    -- Step 3: Combine results with additional computation
+    return a + (b * math.sqrt(x^2 + y^2))
+end
+```
+
 ### Returns
 Early return pattern is preferred, as they provide easier readability and transparency.<br>
 Example:
