@@ -147,6 +147,39 @@ and understand its purpose.
         return true;
     }
     ```
+-   Use **early-continue** to improve code readability.
+    ``` cpp
+    // Poor readability
+    bool SomeFunction()
+    {
+        for(auto i=0; i<255; i++)
+        {
+            if(conditionA)
+            {
+                someCode();
+                if(conditionB)
+                {
+                    otherCode();
+                }
+            }
+        }
+    }
+
+    // Clearer readability
+    bool SomeFunction()
+    {
+        for(auto i=0; i<255; i++)
+        {
+            if(!conditionA)
+                continue;
+                
+            someCode();
+            if(!conditionB)
+                continue;
+            otherCode();
+        }
+    }
+    ```
 -   Always strive to maintain code readability. If a type is lengthy to
     write, you can use auto to improve readability
     ``` cpp
