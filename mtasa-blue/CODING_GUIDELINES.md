@@ -373,7 +373,7 @@ appropriate headers (such as **`<cstdint>`**,
         includes headers like **`<cstdint>`** and
         **`<cstddef>`**, which provide standardized types:
 
-        * `<cstdint> includes exact-width integer types such as
+        * `<cstdint>` includes exact-width integer types such as
         **'std::uint32_t**, **std::int32_t**, etc.
 
         * `<cstddef>` includes types like **std::size_t**,
