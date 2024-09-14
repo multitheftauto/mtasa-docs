@@ -178,7 +178,7 @@ and understand its purpose.
         return IsMoving() ? m_pMoveAnimation : nullptr;
     }
     ```
--   if a loop or condition is short, omit curly braces
+-   If a loop or condition is short, omit curly braces
     ``` cpp
     // Instead of
     if (!bStillRunning)
@@ -187,7 +187,6 @@ and understand its purpose.
     }
 
     // You can do
-
     if (!bStillRunning)
         StopMoving();
 
@@ -197,6 +196,22 @@ and understand its purpose.
             for (this)
                 ...
     ```
+-   The final line of a brace-less condition/loop should be separated for readability, e.g:
+    ``` cpp
+    // Instead of
+    PreCheck();
+    if (!bStillRunning)
+        StopMoving();
+    PostCheck();
+
+    // You should do
+    PreCheck();
+    if (!bStillRunning)
+        StopMoving();
+    
+    PostCheck();
+    ```
+    
 -   Functions that only return a value should be placed in header files.
     For example, instead of:
     ``` cpp
