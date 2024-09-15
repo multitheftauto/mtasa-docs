@@ -212,13 +212,8 @@ and understand its purpose.
         return IsMoving() ? m_pMoveAnimation : nullptr;
     }
     ```
-<<<<<<< Updated upstream
 -   If a loop or condition is short, omit curly braces
-    ``` cpp
-=======
--   if a loop or condition is short, omit curly braces
     ```cpp
->>>>>>> Stashed changes
     // Instead of
     if (!bStillRunning)
     {
