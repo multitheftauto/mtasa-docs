@@ -152,7 +152,7 @@ and understand its purpose.
     // Poor readability
     bool SomeFunction()
     {
-        for(auto i=0; i<255; i++)
+        for(auto i = 0; i < 255; i++)
         {
             if(conditionA)
             {
@@ -168,14 +168,15 @@ and understand its purpose.
     // Clearer readability
     bool SomeFunction()
     {
-        for(auto i=0; i<255; i++)
+        for(auto i = 0; i < 255; i++)
         {
-            if(!conditionA)
+            if (!conditionA)
                 continue;
                 
             someCode();
-            if(!conditionB)
+            if (!conditionB)
                 continue;
+
             otherCode();
         }
     }
