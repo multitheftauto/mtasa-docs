@@ -332,7 +332,16 @@ wherever possible.
 * Use the
 [noexcept](https://en.cppreference.com/w/cpp/language/noexcept_spec)
 specifier whenever possible, but **be cautious** as it can cause the
-program to terminate if an exception is thrown.
+program to terminate if certain conditions are met:
+  - An exception is thrown in the noexcept function;
+  - Noexcept function calls a **throwing** function;
+  - Noexcept function calls a deallocation function that fails.
+
+  Throwing in noexcept function calls std::terminate.
+std::terminate calls std::terminate_handler which by default calls std::abort.
+std::abort raises SIGABRT signal.
+We don't handle that signal anywhere in the code, causing unavoidable termination of the process.
+Only the client code is somewhat protected from it by using the `SetUnhandledExceptionFilter` function.
 
 ### Null pointers
 
