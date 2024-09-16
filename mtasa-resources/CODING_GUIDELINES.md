@@ -81,23 +81,6 @@ end
 addEventHandler("onPlayerJoin", root, playerJoin)
 ```
 
-### Avoid anonymous functions
-
-Rather than using anonymous functions (i.e when calling [`addEventHandler`](https://wiki.multitheftauto.com/wiki/AddEventHandler)), use a named local function instead. For example:
-
-```lua
--- Rather than this:
-addEventHandler("onPlayerConnect", root, function()
-    outputChatBox("Hello!")
-end)
-
--- Do this:
-local function onConnect()
-    outputChatBox("Hello!")
-end
-addEventHandler("onPlayerConnect", root, onConnect)
-```
-
 ### Consistent naming conventions
 
 All function names and variables should use the camel case naming convention. Constant variables should use upper snake case (see below).
