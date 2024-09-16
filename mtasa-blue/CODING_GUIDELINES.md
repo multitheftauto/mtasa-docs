@@ -28,14 +28,14 @@ We always try to avoid magic numbers like memory addresses, offsets,
 some constant numbers, etc. You can use the **#define** macro to define
 the numbers or at least use comments to document these numbers.
 
-``` cpp
+```cpp
 float CWeatherSA::GetWetRoads() const
 {
     return *(float*)0xC81308; // CWeather::WetRoads
 }
 ```
 
-``` cpp
+```cpp
 // In the header
 #define NUM_WETROADS    0xC81308
 
@@ -49,7 +49,7 @@ float CWeatherSA::GetWetRoads() const
 When using the **#define** macro, we use a prefix that specifies what it
 defines.
 
-``` cpp
+```cpp
 #define FUNC_RemoveRef                               0x4C4BB0 // Function address
 #define ARRAY_aCannons                               0xC80740 // Array address
 #define STRUCT_CAESoundManager                       0xB62CB0 // Struct address
@@ -65,17 +65,17 @@ defines.
 We use different naming conventions depending on the context.
 
 -   Use **lower camel case** for variable names and types:
-    ``` cpp
+    ```cpp
     SSomeStruct   valueOne;
     ESomeEnum     m_valueTwo;
     ```
 -   Use **upper camel case** for functions and classes:
-    ``` cpp
+    ```cpp
     void UpperCamelCase();
     class Vector;
     ```
 -   Class member, should start with the prefix **m\_**
-    ``` cpp
+    ```cpp
     CVector       m_vecPosition;
     CVector       m_vecRotation;
     bool          m_isVisible;
@@ -83,7 +83,7 @@ We use different naming conventions depending on the context.
     ```
 -   We **avoid** Hungarian notation in new codes, so use it only if
     necessary for consistency with the current code you are editing.
-    ``` cpp
+    ```cpp
     float         fValue;               // Local variable
     unsigned char m_ucValue;            // Class member variable
     char          ms_cValue;            // Class static member variable
@@ -98,7 +98,7 @@ We use different naming conventions depending on the context.
 Define and call functions without arguments simply with empty
 parentheses. Don't use *void* in this case as it is an old practice!
 
-``` cpp
+```cpp
 // Bad
 void MyFunction(void);
 MyFunction(void);
@@ -115,7 +115,7 @@ make your code as readable as possible so that anyone can easily read it
 and understand its purpose.
 
 -   Use **early-returns** to improve code readability.
-    ``` cpp
+    ```cpp
     // Poor readability
     bool CStaticFunctionDefinitions::RespawnObject(CElement* pElement)
     {
@@ -183,7 +183,7 @@ and understand its purpose.
     ```
 -   Always strive to maintain code readability. If a type is lengthy to
     write, you can use auto to improve readability
-    ``` cpp
+    ```cpp
     CDeatchmatchObject* pObject = static_cast<CDeathmatchObject*>(pEntity);
     // Can be
     auto* pObject = static_cast<CDeathmatchObject*>(pEntity);
@@ -192,7 +192,7 @@ and understand its purpose.
     We prefer to use **auto\*** when it comes to pointer, even though
     auto itself is sufficient.
 -   Use logical conditions whenever possible
-    ``` cpp
+    ```cpp
     // Poor readability
     const CPositionRotationAnimation* CObject::GetMoveAnimation()
     {
@@ -213,7 +213,7 @@ and understand its purpose.
     }
     ```
 -   If a loop or condition is short, omit curly braces
-    ``` cpp
+    ```cpp
     // Instead of
     if (!bStillRunning)
     {
@@ -248,7 +248,7 @@ and understand its purpose.
     
 -   Functions that only return a value should be placed in header files.
     For example, instead of:
-    ``` cpp
+    ```cpp
     // In .cpp file
     int GetGameSpeed()
     {
@@ -258,11 +258,11 @@ and understand its purpose.
 
     Do it in the header:
 
-    ``` cpp
+    ```cpp
     int GetGameSpeed() const noexcept { return m_iGameSpeed; }
     ```
 -   Don't use unnecessary parenthesis.
-    ``` cpp
+    ```cpp
     // Bad
     bool CClientPed::IsDead()
     {
@@ -276,7 +276,7 @@ and understand its purpose.
     }
     ```
 -   Use [range-based for loops](https://en.cppreference.com/w/cpp/language/range-for) when possible.
-    ``` cpp
+    ```cpp
     std::vector<int> vec; // Example std container
 
     // Bad:
@@ -298,7 +298,7 @@ and understand its purpose.
 
 -   Always place a copyight comment at the beginning of header files  
   
-    ``` cpp
+    ```cpp
     /*****************************************************************************
     *
     *  PROJECT:     Multi Theft Auto
@@ -354,7 +354,7 @@ setting or returning a null pointer.
 Use [member initialization lists](https://en.cppreference.com/w/cpp/language/constructor) 
 whenever possible. Instead of doing:
 
-``` cpp
+```cpp
 CObject::CObject(CElement* pParent, CObjectManager* pObjectManager, bool bIsLowLod) 
     : CElement(pParent), m_bIsLowLod(bIsLowLod), m_pLowLodObject(NULL)
 {
@@ -382,7 +382,7 @@ CObject::CObject(CElement* pParent, CObjectManager* pObjectManager, bool bIsLowL
 
 Do:
 
-``` cpp
+```cpp
 CObject::CObject(CElement* pParent, CObjectManager* pObjectManager, bool bIsLowLod)
     : CElement(pParent),
       m_bIsLowLod(bIsLowLod),
@@ -457,7 +457,7 @@ yet been used in many places and you can often see the old **CScriptArgReader**.
 For new codes, use a new parser if possible. If you are refactoring older functions, 
 you usually need to use **ArgumentParserWarn** to maintain backward compatibility.
 
-``` cpp
+```cpp
 // New function
 {"pathListDir", ArgumentParser<pathListDir>},
 
