@@ -5,7 +5,6 @@ Our project is organised into a number of different directories which serve diff
 - **Client**
 - **Server**
 - **Shared:** contains code shared between both the client and the server
-- **utils:** utilities used to automate certain tasks
 - **vendor:** unmodified third-party code and libraries (optionally linked to the appropriate third-party Git repository through Git submodules). 
 
 ## Projects explained
