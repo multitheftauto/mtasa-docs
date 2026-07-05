@@ -33,6 +33,8 @@ as well as information on best practices.
 
 Coding guidelines (exploring real code snippets and scenarios) should be kept in `CODING_GUIDELINES.md`
 
+Policies that apply to all Multi Theft Auto projects should be stored at the repository root and linked from each applicable project guide. This includes the [AI-assisted contributions policy](AI_ASSISTED_CONTRIBUTIONS.md) and the [Code review](CODE_REVIEW.md) guide.
+
 If a document requires a large snippet of code, it's best to store the code snippet separately under `examples/<example_name>`
 
 For example (pun not intended), if writing the section on "Securing element data" for the [Script security](#) guide, the script example would be under `mtasa-resources/examples/securing_element_data.lua` and you'd link to that file in the guide.

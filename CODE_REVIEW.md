@@ -4,6 +4,7 @@
 - [Everyone](#everyone)
 - [As a code submitter](#as-a-code-submitter)
 - [As a reviewer](#as-a-reviewer)
+  - [Reviewing AI-assisted contributions](#reviewing-ai-assisted-contributions)
 - [Responding to feedback](#responding-to-feedback)
 
 _These aren't necessarily "rules", it is just a guide on how to review code effectively._
@@ -109,6 +110,21 @@ experience, refactors the existing code). Then:
 * Sign off on the pull request with a :thumbsup: or "Ready to merge" comment.
 
 If the pull request author has merge permissions prefer review approvals instead of merging the PR for them.
+
+### Reviewing AI-assisted contributions
+
+Review AI-assisted contributions using the same correctness, security, testing,
+and maintainability standards as any other contribution.
+
+The contributor, not the AI tool, is responsible for the submitted work.
+Reviewers may ask contributors to explain design decisions, unusual code, or the
+tests they performed. A contribution may be rejected when the contributor cannot
+adequately explain or support the submitted changes.
+
+Verify that meaningful AI assistance was disclosed according to the
+[AI-assisted contributions policy](AI_ASSISTED_CONTRIBUTIONS.md). Do not rely on
+automated AI-content detectors. Review the actual implementation and the
+contributor's demonstrated understanding of it.
 
 ## Responding to feedback
 

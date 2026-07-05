@@ -13,5 +13,9 @@ Or you can go directly to the `CODING_GUIDELINES.md`, exploring real code snippe
 - [mtasa-resources](mtasa-resources/CODING_GUIDELINES.md)
 
 
+## AI-assisted contributions
+The use of generative AI tools is permitted, subject to our [AI-assisted contributions policy](AI_ASSISTED_CONTRIBUTIONS.md). Meaningful AI assistance must be disclosed, and contributors remain responsible for reviewing, understanding, and testing their submissions.
+
+
 ## Code reviews
 Not looking to contribute with lines of code, but instead with your code review skills? See our [Code review](CODE_REVIEW.md) document, applicable to all of our projects, which may guide and inspire you to submitting great code reviews!

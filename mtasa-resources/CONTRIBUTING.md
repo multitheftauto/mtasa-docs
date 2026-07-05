@@ -4,6 +4,19 @@ This document mostly contains guidelines as to how your contributions should be 
 
 If you're looking for more specific coding conventions or style guidelines, see the [Coding Guidelines](CODING_GUIDELINES.md).
 
+## AI-assisted contributions
+
+The use of generative AI tools is permitted, but meaningful AI assistance
+must be disclosed. Contributors remain fully responsible for reviewing,
+understanding, and testing all submitted changes.
+
+Add an `Assisted-by:` trailer to each affected commit and include a brief
+AI-assistance disclosure in the pull request description. Automatically
+generated `Co-authored-by:` trailers that clearly identify the AI tool are
+also accepted.
+
+See the [AI-assisted contributions policy](../AI_ASSISTED_CONTRIBUTIONS.md)
+for the complete requirements.
 
 ### Submitting issues
 

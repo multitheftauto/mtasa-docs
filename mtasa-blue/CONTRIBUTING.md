@@ -52,6 +52,7 @@ the mod will be reverted other than in exceptional circumstances.
 - be consistent
 - always give a clear indication of what has been changed without having to look at the code
 - include issue numbers, using [GitHub keywords](https://help.github.com/en/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) where necessary
+- disclose meaningful AI assistance as described in the [AI-assisted contributions policy](../AI_ASSISTED_CONTRIBUTIONS.md)
 - [follow the seven rules identified here](http://chris.beams.io/posts/git-commit/)
     
 The most important of the [seven rules](http://chris.beams.io/posts/git-commit/) has been copied below, but please read the article:
@@ -117,6 +118,20 @@ leaving the pull request clean.
     ```
     Addendum to a80f8d6: fix Windows build error
     ```
+
+## AI-assisted contributions
+
+The use of generative AI tools is permitted, but meaningful AI assistance
+must be disclosed. Contributors remain fully responsible for all submitted
+changes and must review, understand, and test any AI-assisted work.
+
+Add an `Assisted-by:` trailer to each affected commit and include a brief
+AI-assistance disclosure in the pull request description. Automatically
+generated `Co-authored-by:` trailers that clearly identify the AI tool are
+also accepted.
+
+See the [AI-assisted contributions policy](../AI_ASSISTED_CONTRIBUTIONS.md)
+for the complete requirements.
 
 ## Reviewing code
 
